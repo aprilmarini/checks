@@ -14,8 +14,8 @@ class Calculating(Checks):
         self.spawn("clang -std=c11 -o mean mean.c -lcs50 -lm").exit(0)
         
     @check("compiles")
-    def test15(self):
-        """15 yields a mean of 15"""
+    def test37(self):
+        """37 degrees Celsius yields 98.6 degrees Fahrenheit"""
         self.spawn("./mean").stdin("15").stdout(number(15), "15\n").exit(0)
 
     @check("compiles")
