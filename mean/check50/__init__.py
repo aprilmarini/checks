@@ -16,7 +16,7 @@ class Calculating(Checks):
     @check("compiles")
     def test15(self):
         """15 yields a mean of 15"""
-        self.spawn("./mean").stdin("15").stdout("The mean is: 15\n", "15\n").exit(0)
+        self.spawn("./mean").stdin("15").stdout("The mean is: 15\n", "The mean is: 15\n").exit(0)
 
     @check("compiles")
     def test_reject_empty_string(self):
