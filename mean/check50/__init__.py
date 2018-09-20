@@ -15,7 +15,7 @@ class Calculating(Checks):
         
     @check("compiles")
     def test37(self):
-        """37 degrees Celsius yields 98.6 degrees Fahrenheit"""
+        """15 yields a mean of 15"""
         self.spawn("./mean").stdin("15").stdout(number(15), "15\n").exit(0)
 
     @check("compiles")
