@@ -21,10 +21,13 @@ class Calculating(Checks):
     @check("compiles")
     def test0(self):
         """0 yields a mean of 0"""
-        self.spawn("./restaurant").stdin("n").stdin("n").stdin("n").stdin("n").stdin("n").stdout(number("0.00"), "0.00\n").exit(0)
+        self.spawn("./restaurant").stdin("n").stdin("n").stdin("n").stdin("n").stdin("n").stdout(number(0.00), "0.00\n").exit(0)
 
 
     @check("compiles")
     def test_reject_empty_string(self):
         """rejects a non-numeric input of "" """
         self.spawn("./restaurant").stdin("").reject()
+        
+    def number(num):
+        return "(^|[^\d]){}[^\d]".format(num)
