@@ -16,7 +16,7 @@ class Calculating(Checks):
     @check("compiles")
     def testy(self):
         """All y yields a bill of $21.00"""
-        self.spawn("./restaurant").stdin('y').stdin('y').stdin('y').stdin('y').stdin('y').stdout("Total: \$21.00\n", "Total: \$21.00\n").exit(0)
+        self.spawn("./restaurant").stdin('y').stdin('y').stdin('y').stdin('y').stdin('y').stdout("Total: \$21.00\nTotal with 15% tip is \$24.15\n", "Total: \$21.00\n").exit(0)
     
     @check("compiles")
     def testgc(self):
@@ -30,7 +30,7 @@ class Calculating(Checks):
         
     @check("compiles")
     def testnachos(self):
-        """nachos yields a bill of $4.00"""
+        """Nachos yields a bill of $4.00"""
         self.spawn("./restaurant").stdin('n').stdin('n').stdin('y').stdin('n').stdout("Total: \$4.00\n", "Total: \$4.00\n").exit(0)
         
     @check("compiles")
