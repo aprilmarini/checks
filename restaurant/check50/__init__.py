@@ -21,12 +21,12 @@ class Calculating(Checks):
     @check("compiles")
     def testgc(self):
         """Grilled cheese yields a bill of $5.00"""
-        self.spawn("./restaurant").stdin('y').stdin('n').stdin('n').stdin('n').stdout("Total: \$5.00\n", "Total: \$5.00\n").exit(0)  
+        self.spawn("./restaurant").stdin('y').stdin('n').stdin('n').stdin('n').stdout("Total: \$5.00\nTotal with 15% tip: \$5.75\n", "Total: \$5.00\nTotal with 15% tip: \$5.75\n").exit(0)  
         
     @check("compiles")
     def testhd(self):
         """Hot dog yields a bill of $5.00"""
-        self.spawn("./restaurant").stdin('n').stdin('y').stdin('n').stdin('n').stdout("Total: \$5.00\n", "Total: \$5.00\n").exit(0)
+        self.spawn("./restaurant").stdin('n').stdin('y').stdin('n').stdin('n').stdout("Total: \$5.00\nTotal with 15% tip: \$5.75\n", "Total: \$5.00\nTotal with 15% tip: \$5.75\n").exit(0)
         
     @check("compiles")
     def testnachos(self):
