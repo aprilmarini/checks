@@ -16,7 +16,7 @@ class Calculating(Checks):
     @check("compiles")
     def testy(self):
         """All y yields a bill of $21.00"""
-        self.spawn("./restaurant").stdin('y').stdin('y').stdin('y').stdin('y').stdin('y').stdout("Total: \$21.00\n", "Total: \$21.00\n").stdout("Total with 15\% tip: \$24.15\n", "Total with 15\% tip: \$24.15\n").exit(0)
+        self.spawn("./restaurant").stdin('y').stdin('y').stdin('y').stdin('y').stdin('y').stdout("Total: \$21.00\n", "Total: \$21.00\n").stdout(number(24.15), "24.15\n").exit(0)
         
     @check("compiles")
     def test0(self):
