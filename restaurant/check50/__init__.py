@@ -16,12 +16,12 @@ class Calculating(Checks):
     @check("compiles")
     def testy(self):
         """All y yields a bill of $21.00"""
-        self.spawn("./restaurant").stdin('y').stdin('y').stdin('y').stdin('y').stdin('y').stdout("Total: 21.00\n", "Total: 21.00\n").exit(0)
+        self.spawn("./restaurant").stdin('y').stdin('y').stdin('y').stdin('y').stdin('y').stdout("Total: $21.00\n", "Total: $21.00\n").exit(0)
         
     @check("compiles")
     def test0(self):
         """n yields a bill of $0.00"""
-        self.spawn("./restaurant").stdin('n').stdin('n').stdin('n').stdin('n').stdout("Total: 0.00\n", "Total: 0.00\n").exit(0)
+        self.spawn("./restaurant").stdin('n').stdin('n').stdin('n').stdin('n').stdout("Total: $0.00\n", "Total: $0.00\n").exit(0)
 
 
     @check("compiles")
