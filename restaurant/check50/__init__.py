@@ -31,17 +31,17 @@ class Calculating(Checks):
     @check("compiles")
     def testnachos(self):
         """Nachos yields a bill of $4.00"""
-        self.spawn("./restaurant").stdin('n').stdin('n').stdin('y').stdin('n').stdout("Total: \$4.00\n", "Total: \$4.00\n").exit(0)
+        self.spawn("./restaurant").stdin('n').stdin('n').stdin('y').stdin('n').stdout("Total: \$4.00\nTotal with 15% tip: \$4.60\n", "Total: \$4.00\nTotal with 15% tip: \$4.60\n").exit(0)
         
     @check("compiles")
     def testhamburger(self):
         """Hamburger yields a bill of $6.00"""
-        self.spawn("./restaurant").stdin('n').stdin('n').stdin('n').stdin('y').stdin('n').stdout("Total: \$6.00\n", "Total: \$6.00\n").exit(0)
+        self.spawn("./restaurant").stdin('n').stdin('n').stdin('n').stdin('y').stdin('n').stdout("Total: \$6.00\nTotal with 15% tip: \$6.90\n", "Total: \$6.00\nTotal with 15% tip: \$6.90\n").exit(0)
         
     @check("compiles")
     def testcheeseburger(self):
         """Cheeseburger yields a bill of $7.00"""
-        self.spawn("./restaurant").stdin('n').stdin('n').stdin('n').stdin('y').stdin('y').stdout("Total: \$7.00\n", "Total: \$7.00\n").exit(0)        
+        self.spawn("./restaurant").stdin('n').stdin('n').stdin('n').stdin('y').stdin('y').stdout("Total: \$7.00\nTotal with 15% tip: \$8.05\n", "Total: \$7.00\nTotal with 15% tip: \$8.05\n").exit(0)        
         
     @check("compiles")
     def test0(self):
