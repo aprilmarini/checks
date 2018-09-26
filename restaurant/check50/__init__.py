@@ -21,7 +21,7 @@ class Calculating(Checks):
     @check("compiles")
     def test0(self):
         """0 yields a mean of 0"""
-        self.spawn("./restaurant").stdin("n").stdin("n").stdin("n").stdin("n").stdin("n").stdout("\nThe total for your food is $0.00.\n The total with 15% tip is $0.00.\n Thank you for your business!\n", "\nThe total for your food is $0.00.\n The total with 15% tip is $0.00.\n Thank you for your business!\n").exit(0)
+        self.spawn("./restaurant").stdin("n").stdin("n").stdin("n").stdin("n").stdin("n").stdout(number(0.00), "0.00\n").exit(0)
 
 
     @check("compiles")
