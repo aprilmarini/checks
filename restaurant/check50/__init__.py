@@ -20,7 +20,7 @@ class Calculating(Checks):
         
     @check("compiles")
     def test0(self):
-        """0 yields a mean of 0"""
+        """n yields a bill of $0.00"""
         self.spawn("./restaurant").stdin('n').stdin('n').stdin('n').stdin('n').stdin('n').stdout("Total: $0.00.\n", "Total: $0.00.\n").exit(0)
 
 
