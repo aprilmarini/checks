@@ -16,4 +16,4 @@ class Calculating(Checks):
     @check("compiles")
     def test1(self):
         """Test 1"""
-        self.spawn("./function").stdout("Square Function!\n").stdin(2).stdout("2 squared is 4\n").stdout("\n").stdout("Minimum Function!\n").stdin(1).stdin(2).stdin(3).stdout("The minimum of the three numbers is: 1\n").stdout("\n").stdout("Quadratic Formula Function!\n").stdin(1).stdin(15).stdin(1).stdout("x = -0.066966, -14.933034\n").exit(0)
+        self.spawn("./function").stdout("Square Function!\n").stdin("2").stdout("2 squared is 4\n").stdout("\n").stdout("Minimum Function!\n").stdin("1").stdin("2").stdin("3").stdout("The minimum of the three numbers is: 1\n").stdout("\n").stdout("Quadratic Formula Function!\n").stdin("1").stdin("15").stdin("1").stdout("x = -0.066966, -14.933034\n").exit(0)
